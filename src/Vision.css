@@ -1,0 +1,30 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.vision {
+  display: grid;
+  place-items: center;
+}
+.vis {
+  margin-top: 130px;
+}
+.vis > h1 {
+  font-size: 45px;
+  font-weight: 900;
+}
+.para{
+
+}
+.pp {
+  margin-top: 90px;
+  width: 50%;
+  align-items: center;
+  margin-left: 25%;
+  color: gray;
+  font-weight: 900;
+  margin-bottom: 200px;
+  padding: 30px;
+  box-shadow: 0 2px 50px grey;
+  border-radius: 10px;
+}

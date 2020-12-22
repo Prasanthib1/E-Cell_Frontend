@@ -1,0 +1,52 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.head {
+  margin-top: 70px;
+  font-size: 21px;
+}
+
+.iii {
+  margin-top: -100px;
+  height: 700px;
+  width: 700px;
+  object-fit: contain;
+}
+.iig {
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+  margin-left: 30px;
+}
+h1 {
+  font-weight: 900;
+}
+.youtube {
+  margin-top: 50px;
+}
+.vid {
+  height: 100px;
+  width: 100px;
+  margin-left: 75px;
+  margin-right: 30px;
+  margin-top: 70px;
+}
+.activity {
+  display: flex;
+  width: 55%;
+  overflow-x: scroll;
+}
+.activity::-webkit-scrollbar {
+  display: none;
+}
