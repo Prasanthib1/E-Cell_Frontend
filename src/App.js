@@ -1,138 +1,71 @@
-import './App.css';
-import Header from './Header';
-import Vision from './Vision';
-import Core from './Core';
-import News from './News';
-import Contact from './Contact';
 import {BrowserRouter as Router,Switch,Route}  from 'react-router-dom';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import FacebookIcon from '@material-ui/icons/Facebook'; 
-import CopyrightIcon from '@material-ui/icons/Copyright';
-import Project from './Project';
-import Blogs from './Blogs';
-import Club from './Club';
-import About from './About';
-import Message from './Message';
+import './App.css';
+
+import Header from './components/Header';
+import Home from './Home/home';
+import Vision from './Home/Vision';
+import Core from './Home/Core';
+import Youtube from './Home/Youtube';
+import Contact from './components/Contact';
+
+import About from './AboutUs/About';
+
+import App2 from './Blogs/Blogsmain';
+
+import Club from './Members/Club';
+import Alumni from './Members/alumni';
+
+import Projects1 from './Projects/projects1';
+import Projects2 from './Projects/projects2';
+import Magazine from './Projects/magazine';
+
+import EventMain from './Event/event2';
+import {Event1_21, Event2_21, Event3_21, Event4_21, Event5_21, Event6_21, Event7_21, Event8_21, Event9_21, Event10_21,Event1_20, Event2_20, Event3_20, Event4_20, Event5_20, Event6_20, Event7_20} from './Event/Events/event_1';
+//import { Carousel } from 'bootstrap';
 
 function App() {
   return (
-    <Router>
-      <Switch>
+    <Router className="router">
+      <Header />
+       <Switch>
        <div className="app">
         <Route exact path="/">
-          <Header />
-          <img className="imgg" src="https://hackverse.nitk.ac.in/blog/assets/images/nitk/aerial-kite-fest.jpg" />
-          <span className="icons">
-            <FacebookIcon className="icon_hp_f" fontSize='large' onClick={()=> window.open("https://www.facebook.com/saenitk/", "_blank")}/>
-            <YouTubeIcon className="icon_hp_yt" fontSize='large' onClick={()=> window.open("https://www.youtube.com/channel/UCPiCkG64oF7KKec7tEhquyw", "_blank")}/>
-            <LinkedInIcon className="icon_hp_li"fontSize='large' onClick={()=> window.open("https://www.linkedin.com/company/saenitk/?originalSubdomain=in", "_blank")}/>
-            <InstagramIcon className="icon_hp_ins"fontSize='large' onClick={()=> window.open("https://www.instagram.com/sae_nitk/?hl=en", "_blank")}/>
-          </span>
-          <section class="vision"><Vision /></section>
-          <section class="core"><Core /></section>
-          <News />         
-          <Contact />
+          <Home />
+          <Vision />
+          <Core />
+          <Youtube />         
         </Route>
-        <Route exact path="/project">
-            <Header />
-            <Project />
-            <div className="blank1"></div>
-            <Contact />
+        <Route exact path="/about"><About /></Route>
+        <Route exact path="/blog"><App2 /></Route>
+        <Route exact path="/project1"><Projects1 /></Route>
+        <Route exact path="/project2">
+            <Projects2 />
+            <Magazine />
         </Route>
-        <Route exact path="/blog">
-          <Header />
-          <h1 className="heading_blog">BLOGS</h1>
-          <div className="blog_info">
-            <div className="blog_info_1">
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-            </div>
-            <div className="blog_info_2">
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-            </div>
-            <div className="blog_info_3">
-             
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-            </div>
-            <div className="blog_info_4">
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-            </div>
-            <div className="blog_info_5">
-              <Blogs
-               image="https://pulsenitk.in/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-08-at-20.56.22-1200x640.jpeg"
-               desc="Imagine a material that you do not want to be susceptible to cutting under any circumstances. That could be security doors, bike locks, protective equipment like body Armor or, heck, even shoe soles. These are just a handful of the applications that Proteus can be used."
-             />
-             </div>
-             </div>
-             <div className="blank1"></div>
-            <Contact />
-           </Route>
-           <Route exact path="/club">
-           <Header />
-           <Club />
-           <div className="blank1"></div>
-           <Contact />
-           </Route>
-           <Route exact path="/about">
-           <Header />
-           <About />
-           <div className="blank1"></div>
-           <Contact />
-           </Route>
-           <Route exact path="/message">
-            <Message />
-            <div className="blank1"></div>
-            <Contact />
-          </Route>
-          
-           
-    </div>
-    </Switch>
+        <Route exact path="/club"><Club /></Route>
+        <Route exact path="/alumni"><Alumni/></Route>
+        <Route exact path="/event"><EventMain /></Route>
+
+        <Route exact path="/event/event1_21"><Event1_21/></Route>
+        <Route exact path="/event2_21"><Event2_21/></Route>
+        <Route exact path="/event3_21"><Event3_21/></Route>
+        <Route exact path="/event4_21"><Event4_21/></Route>
+        <Route exact path="/event5_21"><Event5_21/></Route>
+        <Route exact path="/event6_21"><Event6_21/></Route>
+        <Route exact path="/event7_21"><Event7_21/></Route>
+        <Route exact path="/event8_21"><Event8_21/></Route>
+        <Route exact path="/event9_21"><Event9_21/></Route>
+        <Route exact path="/event10_21"><Event10_21/></Route>
+        <Route exact path="/event1_20"><Event1_20/></Route>
+        <Route exact path="/event2_20"><Event2_20/></Route>
+        <Route exact path="/event3_20"><Event3_20/></Route>
+        <Route exact path="/event4_20"><Event4_20/></Route>
+        <Route exact path="/event5_20"><Event5_20/></Route>
+        <Route exact path="/event6_20"><Event6_20/></Route>
+        <Route exact path="/event7_20"><Event7_20/></Route>
+        </div>
+      </Switch>
+      <Contact />
     </Router>
   );
 }
